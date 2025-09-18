@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - mangaladanielle@gmail.com</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+   <nav>
+      <h2 class="logo">CodeM</h2>
+      <div class="nav-links">
+        <ul>
+          <li><a href="home.html">HOME</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+          <li><a href="Contact.html">CONTACT</a></li>
+          </ul>
+      </div>
+    </nav>
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>" Please share your thoughts and send back feedback to us, 
+            we'd love to hear from you, Thank you for cooperating us." </p>
+    </header>
+
+    <section class="contact-container">
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h4>Address</h4>
+                    <p>Purok 3, Bagsit,Liozon,Palauig,Zambales</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h4>Contact Person</h4>
+                    <p>0928-4866-608</p>
+                    <small>Open hours</small>
+                </div>
+            </div>
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h4>Email</h4>
+                    <p>jixasdfghjkl@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="form-handler.php" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

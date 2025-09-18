@@ -1,0 +1,165 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  color: #fff;
+}
+
+/* Header section */
+.header {
+  width: 100%;
+  height: 100vh;
+  background: url('images/bbbg.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+  position: relative;
+}
+
+/* Navigation bar */
+nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff8c42;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Nav links (mobile hidden initially) */
+.nav-links {
+  position: fixed;
+  right: -250px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.95);
+  transition: right 0.3s ease;
+  padding-top: 80px;
+  z-index: 999;
+}
+
+.nav-links.show {
+  right: 0;
+}
+
+.nav-links ul {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-links ul li {
+  margin: 20px 0;
+}
+
+.nav-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+  color: #ff8c42;
+}
+
+/* Menu icons */
+.menu-icon,
+.close-icon {
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: none; /* will be shown by media query */
+}
+
+/* Text box content */
+.text-box {
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
+  padding: 40px 30px;
+  border-radius: 12px;
+  margin-top: 100px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px); /* optional blur effect */
+}
+
+
+.text-box h1 {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #ff8c42;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.text-box p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #fdfdfd;
+}
+
+/* Show menu icon on small screens */
+@media (max-width: 767px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .nav-links.show ~ .close-icon {
+    display: block;
+  }
+
+  .nav-links.show ~ .menu-icon {
+    display: none;
+  }
+}
+
+/* Desktop view styles */
+@media (min-width: 768px) {
+  .menu-icon,
+  .close-icon {
+    display: none !important;
+  }
+
+  .nav-links {
+    position: static;
+    height: auto;
+    width: auto;
+    background: transparent;
+    padding: 0;
+  }
+
+  .nav-links ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links ul li {
+    margin: 0;
+  }
+}
+
